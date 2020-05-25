@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.15)
 
-project(demo LANGUAGES C)
+project(oscar_iso8583 LANGUAGES C)
 
 add_library(iso8583lib STATIC
     dl_c_iso8583_v0_0_3/dl_iso8583.c
@@ -37,5 +37,5 @@ target_link_libraries(commonlib iso8583lib)
 target_include_directories(iso8583lib PUBLIC dl_c_iso8583_v0_0_3)
 target_include_directories(commonlib PUBLIC dl_c_common_v0_0_2)
 
-add_executable(demo demo.c)
-target_link_libraries(demo PUBLIC iso8583lib commonlib)
+#add_executable(demo demo.c)
+#target_link_libraries(demo PUBLIC iso8583lib commonlib)
